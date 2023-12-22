@@ -1,0 +1,804 @@
+/* --------------------------- */
+/* --Tablet And Normal Mobile Screen Start Here */
+/* ------------------------------- */
+
+@media screen and (max-width: 900px) {
+
+     section {
+          padding: 0 2rem;
+     }
+
+     h1 {
+          font-size: 30px;
+     }
+
+     h2 {
+          font-weight: 600;
+          font-size: 24px;
+     }
+
+     p {
+          font-size: 11px;
+     }
+
+     .heading {
+          padding: 2rem 0;
+     }
+
+     .logo img {
+          max-height: 20px;
+     }
+
+     /* Main btn responsive */
+     .main-btn {
+          padding: 12px 21px;
+          color: var(--white-c);
+          background: var(--bright-pink);
+          text-decoration: none;
+          font-weight: 400;
+          font-size: 12px;
+          border-radius: 56px;
+          transition: background-color 0.3s ease;
+     }
+
+     /* --------------------------- */
+     /* --Reusable Navigation Responsive style Here */
+     /* ------------------------------- */
+     .navigation {
+          padding: 30px 0 36px;
+     }
+
+     .nav-links {
+          position: absolute;
+          top: 12%;
+          left: 0;
+          width: 100%;
+          padding: 1rem 0;
+          box-shadow: none;
+          opacity: 1;
+          z-index: -1;
+     }
+
+     .nav-links ul {
+          opacity: 0;
+          flex-direction: column;
+     }
+
+     .nav-links ul li {
+          margin: 10px 0;
+          opacity: 0;
+          transform: translateY(-20px);
+          transition: opacity 0.3s ease, transform 0.3s ease;
+     }
+
+     .menu-toggle {
+          display: block;
+          margin-right: 2rem;
+     }
+
+     .nav-links.active {
+          z-index: 3;
+     }
+
+     .nav-links .active {
+          opacity: 1;
+          color: var(--light-orange);
+          background-color: var(--white-c);
+          margin-top: 0;
+     }
+
+     .nav-links .active ul {
+          opacity: 1;
+          z-index: 3;
+     }
+
+     .nav-links .active ul li {
+          opacity: 1;
+          z-index: 13;
+          transform: translateY(0);
+          transition-delay: 0.1s;
+          background-color: var(--white-c);
+     }
+
+     .nav-links ul .primary-btn {
+          margin-bottom: 30px;
+     }
+
+     .nav-links .active>* {
+          opacity: 1;
+     }
+
+     /* Hamburger Icon Animation */
+     .menu-toggle i.fa-bars {
+          display: block;
+          animation: scaleIn 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), fadeIn 0.5s ease;
+     }
+
+     /* Close Icon Animation */
+     .menu-toggle i.fa-times {
+          display: none;
+          animation: scaleIn 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), fadeIn 0.5s ease;
+     }
+
+     /* Keyframe Animations */
+     @keyframes scaleIn {
+          from {
+               transform: scale(0);
+          }
+
+          to {
+               transform: scale(1);
+          }
+     }
+
+     @keyframes fadeIn {
+          from {
+               opacity: 0;
+          }
+
+          to {
+               opacity: 1;
+          }
+     }
+
+
+     /* ---------------------------- */
+     /* (HOME PAGE) */
+     /* ---------------------------- */
+     /* ---------------------------- */
+     /* Section-1 */
+     /* ---------------------------- */
+
+     .home-section-1 {
+          padding-left: 1.3rem;
+          padding-right: 0;
+     }
+
+     .home-section-1 .background-circle {
+          display: none
+     }
+
+     .home-section-1-content {
+          flex-direction: column;
+          overflow: hidden;
+     }
+
+     .home-section-1-left-content {
+          margin-top: 1rem;
+          width: 85%;
+     }
+
+     .color-balls {
+          position: absolute;
+          top: 6.5rem;
+          left: 14rem;
+          z-index: -9;
+     }
+
+     .color-ball-1 {
+          height: 2.5rem;
+          width: 2.5rem;
+          border-radius: 100%;
+          opacity: 0.5;
+     }
+
+     .color-ball-2 {
+          height: 2.5rem;
+          width: 2.5rem;
+     }
+
+     .home-section-1-left-content p {
+          width: 62%;
+          margin-top: 0.9rem;
+          margin-bottom: 2rem;
+          font-size: 11px
+     }
+
+     .home-section-1-left-content .main-btn {
+          margin-left: 0rem;
+     }
+
+     .home-section-1-left-content .counter {
+          align-items: start;
+          margin-top: 3rem;
+          flex-direction: column;
+          gap: 0;
+     }
+
+     .home-section-1-left-content .counter .counter-div {
+          margin-bottom: 1rem;
+     }
+
+     .home-section-1-left-content .counter .counter-div i {
+          padding: 10px;
+          font-size: 22px;
+     }
+
+     .home-section-1-left-content .counter .counter-div div {
+          margin-left: 1rem;
+          text-align: left;
+     }
+
+     .home-section-1-left-content .counter .counter-div div h5 {
+          font-weight: 800;
+          font-size: 17px;
+     }
+
+     .home-section-1-left-content .counter .counter-div div h6 {
+          font-weight: 400;
+          font-size: 10px;
+     }
+
+     .home-section-1-right-content {
+          width: 100%;
+          margin-top: -16rem;
+          margin-left: 2rem;
+          overflow: hidden;
+          z-index: -1;
+     }
+
+     .home-section-1-right-content img {
+          width: 127%;
+          margin-left: 2rem;
+     }
+
+     /* ---------------------------- */
+     /* Section-2 */
+     /* ---------------------------- */
+     .features {
+          flex-direction: column;
+          gap: 5rem;
+     }
+
+     .featureIcon {
+          width: 90px;
+          height: auto;
+     }
+
+     .featureTagline {
+
+          text-align: center;
+          font-size: 20px;
+          margin: 0 auto;
+          font-weight: 400;
+     }
+
+     /* ---------------------------- */
+     /* Section-3 */
+     /* ---------------------------- */
+
+     .home-section-3 {
+
+          padding: 1rem 2rem;
+          display: flex;
+          flex-direction: column-reverse;
+     }
+
+     .home-section-3-left-content {
+          width: 100%;
+     }
+
+     .section-3-left-image {
+          width: 75%;
+          margin-left: 2rem;
+     }
+
+     .home-section-3-right-content {
+          width: 100%;
+          margin: auto 0;
+     }
+
+     .section-3-text {
+          width: 80%;
+     }
+
+     /* ---------------------------- */
+     /* Section-3 */
+     /* ---------------------------- */
+
+     .home-section-3 {
+
+          padding: 1rem 2rem;
+          display: flex;
+          flex-direction: column-reverse;
+     }
+
+     .home-section-3-left-content {
+          width: 100%;
+     }
+
+     .section-3-left-image {
+          width: 100%;
+          margin-left: 0rem;
+          margin-top: 1rem;
+     }
+
+     .home-section-3-right-content {
+          width: 100%;
+          margin: auto 0;
+     }
+
+     .section-3-text {
+          width: 80%;
+     }
+
+     .section-3-btn-box {
+          gap: 1rem;
+     }
+
+     .section-3-btn-box .main-btn {
+          padding: 16px 21px;
+          font-size: 14px;
+     }
+
+     .home-section-3-left-content .background-circle {
+          display: none;
+     }
+
+
+     /* ---------------------------- */
+     /* Section-4 */
+     /* ---------------------------- */
+
+     .home-section-4 {
+          flex-direction: column;
+     }
+
+     .home-section-4-left {
+          width: 100%;
+     }
+
+     .section-4-heading {
+          width: 100%;
+          font-weight: 800;
+          margin-left: 0rem;
+     }
+
+     .section-4-points {
+          font-size: 30px;
+          position: relative;
+          left: -1rem;
+     }
+
+     .home-section-4-right {
+          width: 140%;
+          margin-top: -16rem;
+          margin-left: 3rem;
+     }
+
+     .section-4-img {
+          height: 100%;
+          z-index: -9;
+     }
+
+     .section-4-points div img {
+          width: 19%;
+          height: 20%;
+     }
+
+     .section-4-points div p {
+          font-size: 15px;
+          margin-top: 1rem;
+          width: 41%;
+     }
+
+     .home-section-4 .background-circle {
+          display: none;
+     }
+
+
+
+     /* ---------------------------- */
+     /* Section-5 */
+     /* ---------------------------- */
+
+     .home-section-5 {
+          padding: 1rem;
+
+     }
+
+     .section-5-container {
+          width: 95%;
+          padding: 0;
+     }
+
+     .news-letter-container {
+          margin: 2rem auto;
+          border-radius: 24px;
+          width: 100%;
+          align-items: center;
+     }
+
+     .news-letter-container h2 {
+          max-width: fit-content;
+          margin: 2rem auto;
+          font-weight: 800;
+          font-size: 19px;
+     }
+
+
+
+     /* ---------------------------- */
+     /* Section-6 */
+     /* ---------------------------- */
+
+     .section-6-container h2 {
+
+          font-size: 25px;
+          width: 90%;
+     }
+
+     .section-6-container p {
+          width: 80%;
+          margin: 0 auto;
+     }
+
+     .form-group {
+          width: 100%;
+     }
+
+     .form-group input {
+          padding: 18px 11px;
+          text-align: left;
+          width: 82%;
+          font-size: 12px;
+     }
+
+     .form-group>.main-btn {
+          width: 37%;
+          padding: 17px 15px;
+     }
+
+
+
+     /* ---------------------------- */
+     /* Footer */
+     /* ---------------------------- */
+     .Footer {
+          padding: 1rem;
+          align-items: center;
+          flex-direction: column;
+     }
+
+     .Footer img {
+          margin-top: 1rem;
+          height: 20px;
+          width: auto;
+     }
+
+     .Footer p {
+          font-size: 10px;
+          margin: 1rem 0;
+     }
+
+     .Footer ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+     }
+
+     .Footer i {
+          font-size: 23px;
+     }
+
+
+     /* ---------------------------- */
+     /* Service page */
+     /* ---------------------------- */
+     /* ---------------------------- */
+     /* Section-1 */
+     /* ---------------------------- */
+
+     .service-section-1 {
+          padding-left: 1.3rem;
+          padding-right: 0;
+     }
+
+     .service-section-1 .background-circle {
+          display: none
+     }
+
+     .service-section-1-content {
+          flex-direction: column;
+          overflow: hidden;
+     }
+
+     .service-section-1-left-content {
+          margin-top: 1rem;
+          width: 85%;
+     }
+
+     .service-section-1-left-content-heading .color-balls {
+          position: absolute;
+          top: 7.1rem;
+          left: 16rem;
+          z-index: -9;
+     }
+
+     .service-section-1-left-content-heading h1 {
+          line-height: 2rem;
+          font-size: 25px;
+          margin-top: 1rem;
+     }
+
+     .service-section-1-left-content p {
+          width: 60%;
+          margin-top: 0.9rem;
+          margin-bottom: 2rem;
+          font-size: 11px
+     }
+
+     .service-section-1-left-content .main-btn {
+          margin-left: 0rem;
+     }
+
+     .service-section-1-left-content .counter {
+          align-items: start;
+          margin-top: 3rem;
+          flex-direction: column;
+          gap: 0;
+     }
+
+     .service-section-1-left-content .counter .counter-div {
+          margin-bottom: 1rem;
+     }
+
+     .service-section-1-left-content .counter .counter-div i {
+          padding: 10px;
+          font-size: 22px;
+     }
+
+     .service-section-1-left-content .counter .counter-div div {
+          margin-left: 1rem;
+          text-align: left;
+     }
+
+     .service-section-1-left-content .counter .counter-div div h5 {
+          font-weight: 800;
+          font-size: 17px;
+     }
+
+     .service-section-1-left-content .counter .counter-div div h6 {
+          font-weight: 400;
+          font-size: 10px;
+     }
+
+     .service-section-1-right-content {
+          width: 100%;
+          margin-top: -11rem;
+          margin-left: 3rem;
+          overflow: hidden;
+          z-index: -1;
+     }
+
+     .service-section-1-right-content img {
+          width: 127%;
+          margin-left: 2rem;
+     }
+
+     /* ---------------------------- */
+     /* Service page section-2 */
+     /* ---------------------------- */
+     .services-section-2 {
+          margin-top: 3rem;
+     }
+
+
+     .services-section-header h2 {
+          font-size: 34px;
+          font-weight: 700;
+     }
+
+     .services-section-header>p {
+          width: 75%;
+     }
+
+     .services-section-feature-column-container {
+          margin: 0;
+          flex-direction: column;
+          align-items: center;
+     }
+
+     .services-section-feature-container {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          margin: 2rem 0 0;
+     }
+
+     .service-featureBox {
+          height: 100%;
+          width: 73%;
+          margin-bottom: 2rem;
+     }
+
+     .service-featureBox p {
+          font-size: 13px;
+          padding: 0 15px;
+          margin-bottom: 2rem;
+     }
+
+
+
+     /* ---------------------------- */
+     /* Service page section-3 */
+     /* ---------------------------- */
+     .service-section-3 {
+          margin: 4rem 2rem;
+     }
+
+     .service-section-3-features {
+          flex-direction: column;
+          gap: 3rem;
+          margin-bottom: 9rem;
+     }
+
+     .service-section-3-featureBox h6 {
+          width: 100%;
+          text-align: center;
+          font-size: 16px;
+          margin: 26px auto 0;
+          font-weight: 400;
+     }
+
+     .service-section-3-featureBox i {
+          font-size: 70px;
+     }
+
+
+
+     /* ---------------------------- */
+     /* About page */
+     /* ---------------------------- */
+     /* ---------------------------- */
+     /* Section-1 */
+     /* ---------------------------- */
+     .about-section-1-content-heading h1 {
+          font-size: 30px;
+          width: 60%;
+          position: relative;
+          z-index: 2;
+     }
+
+     .about-section-1-content-heading .color-balls {
+          position: relative;
+          left: -0.6rem;
+          top: 7rem;
+          z-index: 1;
+     }
+
+     .about-section-1-content-heading .color-ball-1 {
+          height: 3.2rem;
+          width: 3.2rem;
+     }
+
+     .about-section-1-content-heading .color-ball-2 {
+          height: 3.3rem;
+          width: 3.3rem;
+          left: 1px;
+          bottom: 68px;
+     }
+
+     .about-section-1-content {
+          width: 100%;
+          height: 90vh;
+          margin: 2rem 0;
+     }
+
+     .about-section-1-content-1-description p {
+          font-size: 10px;
+     }
+
+     .about-section-1-content-1-description {
+          margin-left: 0rem;
+          margin-top: 2rem;
+     }
+
+     /* ---------------------------- */
+     /* Section-2 */
+     /* ---------------------------- */
+     .about-section-2-content {
+          display: flex;
+          margin: 4rem 0 2rem;
+          flex-direction: column;
+     }
+
+     .about-section-2-content-1-left-side-content img {
+          width: 100%;
+          margin-left: 0rem;
+          border-radius: 50px;
+     }
+
+     .about-section-2-content-1-right-side-content {
+          width: 100%;
+          margin-top: 2rem;
+     }
+
+     .about-section-2-content-1-right-side-content h2 {
+          font-size: 21px;
+     }
+
+     .about-section-2-content-1-right-side-content p {
+          width: 100%;
+          font-size: 15px;
+          margin: 2rem 0;
+     }
+
+     .call-us-container i {
+          font-size: 1.5rem;
+
+     }
+
+     /* ---------------------------- */
+     /* Section-3 */
+     /* ---------------------------- */
+
+     .about-section-3-content {
+          margin: 1rem 0rem 7rem;
+          flex-direction: column-reverse;
+     }
+
+     .about-section-3-content-left-side {
+          width: 100%;
+          margin-top: 0rem;
+     }
+
+     .about-section-3-content-left-side h2 {
+          font-size: 22px;
+     }
+
+     .about-section-3-content-left-side p {
+          font-size: 15px;
+          margin-top: 2rem;
+          width: 100%;
+     }
+
+     .about-section-3-content-right-side {
+          width: 100%;
+     }
+
+     .about-section-3-content-right-side img {
+          width: 100%;
+     }
+}
+
+
+/* --------------------------- */
+/* --Small Mobile Screen Start Here */
+/* ------------------------------- */
+
+@media screen and (max-width: 371px) {
+
+     .home-section-1-left-content {
+          margin-top: 1rem;
+          width: 100%;
+     }
+
+     .section-6-container h2 {
+          font-size: 25px;
+          width: 100%;
+     }
+
+     .service-section-1-left-content-heading h1 {
+          line-height: 1.8rem;
+          font-size: 20px;
+          margin-top: 1rem;
+     }
+
+     .service-section-1-left-content-heading .color-balls {
+          top: 7.1rem;
+          left: 12.6rem;
+     }
+
+     .service-section-1-left-content p {
+          width: 66%;
+          font-size: 9px;
+     }
+
+
+
+
+
+
+
+}
