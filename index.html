@@ -52,6 +52,9 @@
                          <li>
                               <a href="about.html">About Us</a>
                          </li>
+                         <li>
+                              <a href="#" id="showContactFormBtnAnchor">Contact</a>
+                         </li>
                          <a href="https://wa.me/918590683963?text=Hi%20there!!" class="primary-btn"><i
                                    class="fa-brands fa-whatsapp"></i> Chat Now</a>
                     </ul>
@@ -89,7 +92,8 @@
 
                     <!-- paragraph -->
                     <p>
-                         Let's unlock your way forward! We are here to guide you with top-notch support for your PhD.
+                         We are here to guide you in thesis/project writing, delivering quality, plagiarism-free papers
+                         for publication.
                     </p>
 
                     <!-- Main button -->
@@ -152,11 +156,11 @@
                </div>
                <div class="featureBox">
                     <img src="./Assests/Section-2-icon-1.png" alt="" class="featureIcon">
-                    <h6 class="featureTagline">PhD Editing and Proofreading Services</h6>
+                    <h6 class="featureTagline">Thesis/Project writing</h6>
                </div>
-               <div class="featureBox">
+               <div class="featureBox" style="padding-top: 50px;">
                     <img src="./Assests/Section-2-icon-3.png" alt="" class="featureIcon">
-                    <h6 class="featureTagline">Application Help</h6>
+                    <h6 class="featureTagline">Statistical Analysis and Bioinformatics</h6>
                </div>
           </div>
 
@@ -256,13 +260,14 @@
           <div class="section-6-container">
                <h2>Contact to get the latest news about us!</h2>
                <p>If you have any questions about our services or how we can help you, contact us today!</p>
-               <form id="submit-form" class="formField"
+               <form class="formField"
                     action="https://script.google.com/macros/s/AKfycbzdx4es6n_eGww9zZ2LNi3wow7X397OpIFWarDgLo2lKXkbOkn2M5WrCmH2jN6Mx-Fr/exec">
                     <div class="form-group">
-                         <input id="tel-number" type="tel" name="Phone Number" placeholder="Enter Your Mobile Number"
+                         <!-- <input id="tel-number" type="tel" name="Phone Number" placeholder="Enter Your Mobile Number"
                               pattern="(\+?\d{10,13})?" title="Enter a valid phone number with 10 to 13 digits"
-                              required>
-                         <input type="submit" class="main-btn" value="Contact Us">
+                              required> -->
+                         <button class="main-btn" type="button" id="showContactFormBtn">Contact Us</button>
+
                     </div>
                </form>
           </div>
@@ -285,46 +290,66 @@
      </section>
 
 
-     <!-- Local js file -->
-     <script>
-          //////////////// Reusable Hamburger Menu Navigation Bar function 
-          document.querySelector('.menu-toggle').addEventListener('click', function () {
-               const navLinks = document.querySelector('.nav-links ul');
-               navLinks.classList.toggle('active');
-               const navLinks1 = document.querySelector('.nav-links');
-               navLinks1.classList.toggle('active');
-               const navLinks2 = document.querySelector('.nav-links ul li');
-               navLinks2.classList.toggle('active');
 
+     <!-- ------------ -->
+     <!-- Contact Form (Pop Up)-->
+     <!-- ------------- -->
+     <div class="background" id="contact-form">
+          <div class="container">
+               <div class="screen">
+                    <div class="screen-header">
+                         <div class="screen-header-left">
+                              <div class="screen-header-button close"></div>
+                              <div class="screen-header-button maximize"></div>
+                              <div class="screen-header-button minimize"></div>
+                         </div>
+                         <div class="screen-header-right close">
+                              <!-- Close button -->
+                              <i class="fa-regular fa-circle-xmark"></i>
+                         </div>
+                    </div>
+                    <div class="screen-body">
+                         <div class="screen-body-item left">
+                              <div class="app-title">
+                                   <span>CONTACT</span>
+                                   <span>US</span>
+                              </div>
+                              <div class="app-contact">CONTACT INFO : +91 8590683963</div>
+                         </div>
+                         <div class="screen-body-item">
+                              <div class="app-form">
+                                   <form id="contactForm" class="formField"
+                                        action="https://script.google.com/macros/s/AKfycbzdx4es6n_eGww9zZ2LNi3wow7X397OpIFWarDgLo2lKXkbOkn2M5WrCmH2jN6Mx-Fr/exec">
+                                        <div class="app-form-group">
+                                             <input class="app-form-control" placeholder="NAME" required>
+                                        </div>
+                                        <div class="app-form-group">
+                                             <input class="app-form-control" type="email" placeholder="EMAIL" required>
+                                        </div>
+                                        <div class="app-form-group">
+                                             <input class="app-form-control" placeholder="CONTACT NO" type="tel"
+                                                  name="Phone Number" pattern="(\+?\d{10,13})?"
+                                                  title="Enter a valid phone number with 10 to 13 digits" required>
+                                        </div>
+                                        <div class="app-form-group message">
+                                             <input class="app-form-control" placeholder="MESSAGE">
+                                        </div>
+                                        <div class="app-form-group buttons">
+                                             <button type="button" class="app-form-button"
+                                                  onclick="clearForm()">CLEAR</button>
+                                             <button class="app-form-button">SEND</button>
+                                        </div>
+                                   </form>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
 
-               // Toggle between hamburger and close icons
-               const barsIcon = document.querySelector('.menu-toggle i.fa-bars');
-               const timesIcon = document.querySelector('.menu-toggle i.fa-times');
-               barsIcon.style.display = navLinks.classList.contains('active') ? 'none' : 'block';
-               timesIcon.style.display = navLinks.classList.contains('active') ? 'block' : 'none';
-          });
-     </script>
+     <!-- -Local Js file ---->
+     <script src="script.js"></script>
 
-     <!-- Google Linking Script -->
-     <script>
-          $("#submit-form").submit((e) => {
-               e.preventDefault()
-               $.ajax({
-                    url: "https://script.google.com/macros/s/AKfycbzdx4es6n_eGww9zZ2LNi3wow7X397OpIFWarDgLo2lKXkbOkn2M5WrCmH2jN6Mx-Fr/exec",
-                    data: $("#submit-form").serialize(),
-                    method: "post",
-                    success: function (response) {
-                         alert("Form submitted successfully")
-                         window.location.reload()
-                         window.location.href = "./index.html"
-                    },
-                    error: function (err) {
-                         alert("Something Error")
-
-                    }
-               })
-          })
-     </script>
 </body>
 
 </html>
