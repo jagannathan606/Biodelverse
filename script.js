@@ -85,7 +85,6 @@
             justifyContent: "center",
             alignItems: "center",
             minHeight: "100vh",
-            backgroundColor: "rgba(255, 255, 255, 0.5)",
             position: "fixed",
             top: 0,
             left: 0,
