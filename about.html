@@ -223,7 +223,7 @@
                          <!-- <input id="tel-number" type="tel" name="Phone Number" placeholder="Enter Your Mobile Number"
                               pattern="(\+?\d{10,13})?" title="Enter a valid phone number with 10 to 13 digits"
                               required> -->
-                              <button class="main-btn" type="button" id="showContactFormBtn">Contact Us</button>
+                         <button class="main-btn" type="button" id="showContactFormBtn">Contact Us</button>
 
                     </div>
                </form>
@@ -247,7 +247,6 @@
                <li><a href="https://www.instagram.com/biodelvers"><i class="fa-brands fa-instagram"></i></a></li>
           </ul>
      </section>
-
 
 
      <!-- ------------ -->
@@ -277,13 +276,14 @@
                          </div>
                          <div class="screen-body-item">
                               <div class="app-form">
-                                   <form id="contactForm" class="formField"
+                                   <form id="submit-form" class="formField"
                                         action="https://script.google.com/macros/s/AKfycbzdx4es6n_eGww9zZ2LNi3wow7X397OpIFWarDgLo2lKXkbOkn2M5WrCmH2jN6Mx-Fr/exec">
                                         <div class="app-form-group">
-                                             <input class="app-form-control" placeholder="NAME" required>
+                                             <input name="Name" class="app-form-control" placeholder="NAME" required>
                                         </div>
                                         <div class="app-form-group">
-                                             <input class="app-form-control" type="email" placeholder="EMAIL" required>
+                                             <input name="E-Mail ID" class="app-form-control" type="email"
+                                                  placeholder="EMAIL" required>
                                         </div>
                                         <div class="app-form-group">
                                              <input class="app-form-control" placeholder="CONTACT NO" type="tel"
@@ -291,13 +291,34 @@
                                                   title="Enter a valid phone number with 10 to 13 digits" required>
                                         </div>
                                         <div class="app-form-group message">
-                                             <input class="app-form-control" placeholder="MESSAGE">
+                                             <input name="Message" class="app-form-control" placeholder="MESSAGE">
                                         </div>
                                         <div class="app-form-group buttons">
-                                             <button class="app-form-button" onclick="clearForm()">CLEAR</button>
-                                             <button class="app-form-button">SEND</button>
+                                             <button type="button" class="app-form-button"
+                                                  onclick="clearForm()">CLEAR</button>
+                                             <button type="submit" class="app-form-button">SEND</button>
+                                             <!-- loading icon -->
+                                             <div id="loading-icon" style="display: none;"><i
+                                                       class="fas fa-spinner fa-spin"></i></div>
                                         </div>
                                    </form>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <!--contact form successfull box-->
+     <div id="success-message" class="background">
+          <div class="container">
+               <div class="screen">
+                    <div class="screen-body">
+                         <div class="screen-body-item">
+                              <div class="success-message">
+                                   <i class="fas fa-check-circle" style="font-size: 5rem; margin-bottom: 1rem;"></i>
+                                   <h2>Contact Submitted Successfully!</h2>
+                                   <p>Thank you for reaching out. <br> We will get back to you soon.</p>
+                                   <button class="app-form-button" id="done-button">Done</button>
                               </div>
                          </div>
                     </div>

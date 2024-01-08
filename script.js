@@ -56,19 +56,45 @@
 
   ///////////////////////////////////////Google Link Script/////////////////////////////////////////////////////////
   $("#submit-form").submit((e) => {
-       e.preventDefault()
+       e.preventDefault();
+       // Show loading icon
+       $("#loading-icon").show();
        $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbzdx4es6n_eGww9zZ2LNi3wow7X397OpIFWarDgLo2lKXkbOkn2M5WrCmH2jN6Mx-Fr/exec",
+            url: "https://script.google.com/macros/s/AKfycbxbUjNMT0TW9KW13uSAt7O49nHimdIbgz-g7vnG0TytqSYrX11PJYePeLFgAkyvKkVD/exec",
             data: $("#submit-form").serialize(),
             method: "post",
             success: function (response) {
-                 alert("Form submitted successfully")
-                 window.location.reload()
-                 window.location.href = "./index.html"
+                 // Hide loading icon on success
+                 $("#loading-icon").hide();
+                 // Show success message or take other actions
+                 showSuccessMessage();
             },
             error: function (err) {
-                 alert("Something Error")
-
+                 // Hide loading icon on error
+                 $("#loading-icon").hide();
+                 alert("Something went wrong. Please try again.");
             }
-       })
-  })
+       });
+  });
+
+  // Function to show success message
+  function showSuccessMessage() {
+       // Show success message
+       $("#success-message").css({
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            minHeight: "100vh",
+            backgroundColor: "rgba(255, 255, 255, 0.5)",
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            zIndex: 9999
+       }).fadeIn();
+  }
+
+  // Manual hiding of success message and contact form when clicking the "Done" button
+  $("#done-button").click(function () {
+       $("#success-message, #contact-form").fadeOut();
+  });
