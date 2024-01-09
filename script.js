@@ -43,7 +43,7 @@
   });
   ////Clear Buttton Function 
   function clearForm() {
-       var form = document.getElementById('contactForm');
+       var form = document.getElementById('submit-form');
 
        for (var i = 0; i < form.elements.length; i++) {
             var element = form.elements[i];
