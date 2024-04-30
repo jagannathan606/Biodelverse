@@ -475,9 +475,15 @@ section {
 .news-letter-container h2 {
      max-width: fit-content;
      text-align: center;
-     margin: 2rem auto;
+     margin: 3rem auto 2rem;
      font-weight: 800;
-     font-size: 32px;
+     font-size: 27px;
+}
+
+.news-letter-container p {
+     margin-top: -7px;
+     margin-bottom: 30px;
+     text-align: center;
 }
 
 .news-letter-container a {
